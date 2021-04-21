@@ -1,12 +1,12 @@
 package com.example.jetpackdogs.view
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
+import androidx.fragment.app.Fragment
 import com.example.jetpackdogs.R
+import com.example.jetpackdogs.Utils.NavigationUtil
 import kotlinx.android.synthetic.main.fragment_detail.*
 
 
@@ -31,7 +31,7 @@ class DetailFragment : Fragment() {
         detail_button.setOnClickListener {
             // Simple code to perform the Navigation The Directions class are generated from the navigation.xml file
             val actionToListView = DetailFragmentDirections.actionDetailFragmentToListFragment()
-            Navigation.findNavController(it).navigate(actionToListView)
+            NavigationUtil.navigationTransaction(it, actionToListView)
         }
     }
 }
