@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import com.example.jetpackdogs.R
+import com.example.jetpackdogs.Utils.NavigationUtil
 import kotlinx.android.synthetic.main.fragment_list.*
 
 
@@ -25,8 +26,8 @@ class ListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         list_button.setOnClickListener {
-            val actionToDetailFragment =  ListFragmentDirections.actionListFragmentToDetailFragment()
-            Navigation.findNavController(it).navigate(actionToDetailFragment)
+            val actionDetailDirection = ListFragmentDirections.actionListFragmentToDetailFragment()
+            NavigationUtil.navigationTransaction(it,actionDetailDirection)
         }
     }
 
