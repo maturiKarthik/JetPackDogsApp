@@ -31,11 +31,5 @@ class DetailFragment : Fragment() {
             dogUUID = DetailFragmentArgs.fromBundle(it).dogUuid
             text.text = dogUUID.toString()
         }
-
-        detail_button.setOnClickListener {
-            // Simple code to perform the Navigation The Directions class are generated from the navigation.xml file
-            val actionToListView = DetailFragmentDirections.actionDetailFragmentToListFragment()
-            NavigationUtil.navigationTransaction(it, actionToListView)
-        }
     }
 }
