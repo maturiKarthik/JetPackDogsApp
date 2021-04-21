@@ -27,6 +27,9 @@ class ListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         list_button.setOnClickListener {
             val actionDetailDirection = ListFragmentDirections.actionListFragmentToDetailFragment()
+            //After rebuilding the project.
+            actionDetailDirection.dogUuid = 534 // Adding the argument
+
             NavigationUtil.navigationTransaction(it,actionDetailDirection)
         }
     }
