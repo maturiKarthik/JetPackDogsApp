@@ -26,10 +26,6 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //Getting Arguments
-        arguments?.let {
-            dogUUID = DetailFragmentArgs.fromBundle(it).dogUuid
-            text.text = dogUUID.toString()
-        }
+
     }
 }
