@@ -26,16 +26,6 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //Getting Arguments
-        arguments?.let {
-            dogUUID = DetailFragmentArgs.fromBundle(it).dogUuid
-            text.text = dogUUID.toString()
-        }
 
-        detail_button.setOnClickListener {
-            // Simple code to perform the Navigation The Directions class are generated from the navigation.xml file
-            val actionToListView = DetailFragmentDirections.actionDetailFragmentToListFragment()
-            NavigationUtil.navigationTransaction(it, actionToListView)
-        }
     }
 }

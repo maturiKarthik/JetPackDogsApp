@@ -2,24 +2,50 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:context=".view.ListFragment">
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/dogImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:minHeight="200dp"
+            android:scaleType="fitCenter" />
+
         <TextView
-            android:id="@+id/text"
-            android:text="Detail_Fragment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:id="@+id/dogName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="4dp" />
 
-        <Button
-            android:id="@+id/detail_button"
-            android:text="NAV_List_FRAGMENT"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/dogPurpose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dogName"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="4dp" />
 
+        <TextView
+            android:id="@+id/dogTemparment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dogPurpose"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="4dp" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/dogLifeSpan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dogTemparment"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="4dp" />
+
+    </RelativeLayout>
 </layout>
