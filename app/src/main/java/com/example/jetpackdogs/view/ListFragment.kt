@@ -30,7 +30,8 @@ class ListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         // Init the ViewModel
         viewModel = ViewModelProviders.of(this).get(ListViewModel::class.java)
-        viewModel.loadDataFromApi()
+        viewModel.setContext(requireContext())
+        viewModel.retrieveData()
 
         recyclerView.apply {
             layoutManager = LinearLayoutManager(context)
@@ -59,6 +60,7 @@ class ListFragment : Fragment() {
             it?.let {
                 recyclerView.visibility = View.VISIBLE
                 dogListAdapter.updateDogList(it)
+                viewModel.storeDataLocally(it)
             }
         })
 
